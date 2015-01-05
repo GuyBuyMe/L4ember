@@ -18,7 +18,11 @@ class L4emberServiceProvider extends ServiceProvider {
 		//die($base);
 		$base = str_replace($project_base, '', $base, $replace_once);
 		$base = ltrim($base, '/');
+<<<<<<< HEAD
 		//die($project_base);
+=======
+		die($project_base);
+>>>>>>> 294d0fa36a8e3a9d37414e031a6033e1b1029ac5
 		\Event::listen('asset.pipeline.boot', function($pipeline) use ($base) {
 			
 			$config = $pipeline->getConfig();
