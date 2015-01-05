@@ -25,10 +25,15 @@ class L4emberServiceProvider extends ServiceProvider {
 			$config = $pipeline->getConfig();
 			$config['paths'][] = $base . '/javascripts';
 			$config['paths'][] = $base . '/stylesheets';
-			$config['mimes']['javascripts'][] = '.emblem';
+			$config['mimes']['javascripts'][] = '.emb';
+			$config['mimes']['javascripts'][] = '.hbs';
 
-			$config['filters']['.emblem'] = array(
-				new Filters\EmblemjsFilter($config['paths'])
+			$config['filters']['.emb'] = array(
+				new Filters\EmblemFilter($config['paths'])
+			);
+			
+			$config['filters']['.hbs'] = array(
+				new Filters\HandlebarsFilter($config['paths'])
 			);
 
 			$pipeline->setConfig($config);
