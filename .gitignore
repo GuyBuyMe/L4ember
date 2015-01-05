@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 /vendor
 composer.phar
 composer.lock
 .DS_Store
+=======
+/bootstrap/compiled.php
+.env.*.php
+.env.php
+>>>>>>> 91ae8e47b1d7223cd2e6df4a73e6299270e92c64
