@@ -26,7 +26,8 @@ class HandlebarsFilter extends FilterHelper implements FilterInterface
         $parent_dir = ((count($dirname) > 0) ? $dirname[1] : "");
 
         $content = str_replace('"', '\\"', $asset->getContent());
-        $content = str_replace(PHP_EOL, "\\n", $content);
+        $content = str_replace("\r\n", "\n", $content);
+        $content = str_replace("\n", "\\n", $content);
         
         $emblem = 'Ember.TEMPLATES["' . $parent_dir . $filename . '"] = Ember.Handlebars.compile("';
         $emblem .= $content;
