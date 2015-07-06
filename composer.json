@@ -9,16 +9,16 @@
     ],
     
     "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/igorgoroshit/pipeline"
-        }
+		{
+			"type": "git",
+			"url": "https://github.com/igorgoroshit/pipeline"
+		}
     ],
     
     "require": {
         "php": ">=5.4.0",
         "illuminate/support": "4.2.*",
-        "igorgoroshit/pipeline": "*"
+        "igorgoroshit/asset-pipeline": "dev-master"
     },
 
     
