@@ -11,12 +11,12 @@
     "require": {
         "php": ">=5.4.0",
         "illuminate/support": "4.2.*",
-        "codesleeve/asset-pipeline": "*"
+        "codesleeve/asset-pipeline": "2.1.1"
     },
     
     "repositories": [
         {
-            "type": "git",
+            "type": "vcs",
             "url": "https://github.com/igorgoroshit/asset-pipeline"
         }
     ],
