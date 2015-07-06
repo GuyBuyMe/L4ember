@@ -7,19 +7,20 @@
             "email": "igor@webt.co.il"
         }
     ],
-
-    "require": {
-        "php": ">=5.4.0",
-        "illuminate/support": "4.2.*",
-        "codesleeve/asset-pipeline": "dev"
-    },
     
     "repositories": [
         {
-            "type": "git",
+            "type": "vcs",
             "url": "https://github.com/igorgoroshit/asset-pipeline"
         }
     ],
+    
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "codesleeve/asset-pipeline": "dev-master"
+    },
+
     
     "autoload": {
 
