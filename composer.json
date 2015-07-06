@@ -27,6 +27,5 @@
         "psr-0": {
             "Igorgoroshit\\L4ember\\": "src/"
         }
-    },
-    "minimum-stability": "stable"
+    }
 }
