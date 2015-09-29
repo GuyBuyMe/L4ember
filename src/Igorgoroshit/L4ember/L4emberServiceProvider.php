@@ -27,6 +27,7 @@ class L4emberServiceProvider extends ServiceProvider {
 			$config['paths'][] = $base . '/stylesheets';
 			$config['mimes']['javascripts'][] = '.emb';
 			$config['mimes']['javascripts'][] = '.hbs';
+			$config['mimes']['javascripts'][] = '.i18n.json';
 
 			$config['filters']['.emb'] = array(
 				new Filters\EmblemFilter($config['paths'])
@@ -34,6 +35,10 @@ class L4emberServiceProvider extends ServiceProvider {
 			
 			$config['filters']['.hbs'] = array(
 				new Filters\HandlebarsFilter($config['paths'])
+			);
+
+			$config['filters']['.i18n.json'] = array(
+				new Filters\I18nFilter($config['paths'])
 			);
 
 			$pipeline->setConfig($config);
