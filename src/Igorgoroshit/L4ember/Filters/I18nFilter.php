@@ -26,6 +26,7 @@ class I18nFilter extends FilterHelper implements FilterInterface
         $dirname = explode("translations/", dirname($relativePath . $filename));
 
         $parts = explode('/', $dirname[1]);
+        //$locale = $parts[0];
         $locale = array_shift($parts);
         //array_push($parts);
         $fullpath   = implode('.', $parts);
@@ -34,7 +35,7 @@ class I18nFilter extends FilterHelper implements FilterInterface
         $content = str_replace("\r\n", "\n", $content);
         $content = str_replace("\n", "\\n", $content);
 
-        $json  = 'Em.I18n.setp("' . $fullpath . '", "' . $filename . '", JSON.parse("';
+        $json  = 'Em.I18n.setp("'.$locale.'", "' . $fullpath . '", "' . $filename . '", JSON.parse("';
         $json .= $content;
         $json .= '"));/*'.$locale.'*/' . PHP_EOL;
 
